@@ -1,74 +1,26 @@
-// VALIDACIÓN DEL FORMULARIO
+// ==========================================
+//   BOTÓN VOLVER ARRIBA (SMOOTH SCROLL)
+// ==========================================
 
-document
-.getElementById("formulario")
-.addEventListener("submit", function(event){
+// Seleccionamos el botón por su ID
+const btnArriba = document.getElementById("btnArriba");
 
-let nombre =
-document.getElementById("nombre").value.trim();
-
-let correo =
-document.getElementById("correo").value.trim();
-
-let mensaje =
-document.getElementById("mensaje").value.trim();
-
-if(nombre === ""){
-
-event.preventDefault();
-alert("Debe ingresar su nombre.");
-return;
-
-}
-
-if(correo === ""){
-
-event.preventDefault();
-alert("Debe ingresar su correo.");
-return;
-
-}
-
-if(mensaje === ""){
-
-event.preventDefault();
-alert("Debe ingresar un mensaje.");
-return;
-
-}
-
-alert(
-"Formulario validado correctamente. Se enviará la consulta."
-);
-
+// Escuchamos el movimiento del scroll en la pantalla
+window.addEventListener("scroll", function() {
+    // Si el usuario baja más de 300 píxeles, el botón aparece
+    if (window.scrollY > 300) {
+        btnArriba.style.display = "block";
+    } else {
+        // Si está arriba de todo, se oculta
+        btnArriba.style.display = "none";
+    }
 });
 
-
-// BOTÓN VOLVER ARRIBA
-
-const btnArriba =
-document.getElementById("btnArriba");
-
-window.addEventListener("scroll", function(){
-
-if(window.scrollY > 300){
-
-btnArriba.style.display = "block";
-
-}else{
-
-btnArriba.style.display = "none";
-
-}
-
+// Escuchamos el clic en el botón
+btnArriba.addEventListener("click", function() {
+    // Hace un scroll suave hacia el inicio (coordenada 0)
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
-
-btnArriba.addEventListener("click", function(){
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-});
-```
