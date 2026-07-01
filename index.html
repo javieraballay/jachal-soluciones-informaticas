@@ -140,35 +140,40 @@
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_next" value="https://javieraballay.github.io/proyecto-web-form/">
 
-                <div class="mb-3">
-                    <label class="form-label" for="nombre">Nombre y Apellido</label>
-                    <input type="text" class="form-control" id="nombre" name="Nombre" placeholder="Ejemplo: Juan Pérez" required>
-                </div>
+                <!-- Campo: Nombre -->
+<div class="mb-3">
+    <label class="form-label fw-bold" for="nombre">Nombre y Apellido</label>
+    <input type="text" class="form-control" id="nombre" name="Nombre" placeholder="Ejemplo: Juan Pérez" required>
+</div>
 
-                <div class="mb-3">
-                    <label class="form-label" for="correo">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="correo" name="Correo" placeholder="Ejemplo: juanperez@gmail.com" required>
-                </div>
+<!-- Campo: Correo -->
+<div class="mb-3">
+    <label class="form-label fw-bold" for="correo">Correo Electrónico</label>
+    <input type="email" class="form-control" id="correo" name="Correo" placeholder="Ejemplo: juanperez@gmail.com" required>
+</div>
 
-                <div class="mb-3">
-                    <label class="form-label" for="telefono">Teléfono / WhatsApp</label>
-                    <input type="tel" class="form-control" id="telefono" name="Telefono" placeholder="Ejemplo: 2641234567" required>
-                </div>
+<!-- Campo: Teléfono -->
+<div class="mb-3">
+    <label class="form-label fw-bold" for="telefono">Teléfono / WhatsApp</label>
+    <input type="tel" class="form-control" id="telefono" name="Telefono" placeholder="Ejemplo: 2641234567" required>
+</div>
 
-                <div class="mb-3">
-                    <label class="form-label" for="servicio">Servicio de Interés</label>
-                    <select class="form-select" id="servicio" name="Servicio_Interes" required>
-                        <option value="" disabled selected>Seleccioná una opción...</option>
-                        <option value="Diseño Web">Diseño Web</option>
-                        <option value="Redes">Redes e Infraestructura</option>
-                        <option value="Soporte Técnico">Soporte Técnico</option>
-                    </select>
-                </div>
+<!-- Campo: Lista Desplegable de Servicios -->
+<div class="mb-3">
+    <label class="form-label fw-bold" for="servicio">Servicio de Interés</label>
+    <select class="form-select" id="servicio" name="Servicio_Interes" required>
+        <option value="" disabled selected>Seleccioná una opción...</option>
+        <option value="Diseño Web">Diseño Web</option>
+        <option value="Redes">Redes e Infraestructura</option>
+        <option value="Soporte Técnico">Soporte Técnico</option>
+    </select>
+</div>
 
-                <div class="mb-3">
-                    <label class="form-label" for="mensaje">Mensaje o Consulta</label>
-                    <textarea class="form-control" rows="4" id="mensaje" name="Mensaje" placeholder="Escribí acá los detalles de tu consulta..." required></textarea>
-                </div>
+<!-- Campo: Mensaje -->
+<div class="mb-3">
+    <label class="form-label fw-bold" for="mensaje">Mensaje o Consulta</label>
+    <textarea class="form-control" rows="4" id="mensaje" name="Mensaje" placeholder="Escribí acá los detalles de tu consulta..." required></textarea>
+</div>
 
                 <button type="submit" class="btn btn-primary">
                     Enviar Consulta
